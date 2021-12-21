@@ -1,0 +1,122 @@
+@charset "UTF-8"
+/*Global config*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    /*Primary colgr*/
+    --cl0: hsl(215, 51%, 70%); /*Soft blue*/
+    --cl1: hsl(178, 100%, 50%); /*Cyan*/
+    /*Neutral color*/
+    --cl2: hsl(217, 54%, 11%); /*Very dark blue (main BG)*/
+    --cl3: hsl(216, 50%, 16%); /*Very dark blue (card BG)*/
+    --cl4: hsl(215, 32%, 27%); /*Very dark blue*/
+    --cl5: hsl(0, 0%, 100%); /*White*/
+
+    --standard-font: arial, verdana, helvetica, sans-serif;
+    --card-font: 'outfit';
+}
+body{
+    background-color: var(--cl2);
+    color: var(--cl0);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--standard-font);
+}
+main.container{
+    max-width: 375px;
+    background-color: var(--cl3);
+    border-radius: 15px;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.541);
+}
+h2{
+    margin-left: 25px;
+    padding-bottom: 20px;
+    color: var(--cl5);
+}
+h2:hover{
+    color: var(--cl1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+p{
+    margin-left: 25px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.img{
+    padding: 25px;
+    width: 100%;
+    border-radius: 33px;
+    cursor: pointer;
+}
+.view{
+    width: 355px;
+    position: relative;
+}
+.view:hover::after{
+    width: 304px;
+    height: 304px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    content: "";
+    border-radius: 8px;
+    background-color: rgba(64, 179, 199, 0.507);
+}
+.view:hover::before{
+    width: 304px;
+    height: 304px;
+    position: absolute;
+    top: 155px;
+    left: 155px;
+    content: "";
+    border-radius: 8px;
+    background-image: url(/images/icon-view.svg);
+    background-repeat: no-repeat;
+}
+div.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+div.card span{
+    margin-left: -120px;
+}
+#eth{
+    color: var(--cl1);
+    font-weight: bolder;
+}
+div.profile{
+    width: 310px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0px;
+    text-indent: 10px;
+    border-top: 0.5px solid rgba(148, 148, 148, 0.418); 
+}
+div.profile img{
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+div.profile a{
+    text-decoration: none;
+    color: var(--cl5);
+    font-size: 16px;
+}
+div.profile a:hover{
+    color: var(--cl1);
+    transition: 0.5s;
+}
